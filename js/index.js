@@ -109,3 +109,24 @@ contactP[2].textContent = siteContent["contact"]["email"];
 
 let footer = document.querySelector("footer p");
 footer.textContent = siteContent["footer"]["copyright"];
+
+/*
+Task 3 adding new content
+*/
+
+//Changing the color of the nav text
+
+navAnchor.forEach(element => (element.style.color = "green"));
+
+//Adding new element to the nav
+const nav = document.querySelector("nav");
+
+//prepend
+const home = document.createElement("a");
+home.textContent = "Home";
+nav.prepend(home);
+
+//appendChild
+const cart = document.createElement("a");
+cart.textContent = "Cart";
+nav.appendChild(cart);
