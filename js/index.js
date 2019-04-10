@@ -64,13 +64,33 @@ let button = document.querySelector("button");
 button.textContent = siteContent["cta"]["button"];
 
 //Top content
-let features = document.querySelectorAll(".top-content h4");
-let featuresP = document.querySelectorAll(".top-content p");
+let topContent = document.querySelectorAll(".top-content h4");
+let topContentP = document.querySelectorAll(".top-content p");
 
 //features
-features[0].textContent = siteContent["main-content"]["features-h4"];
-featuresP[0].textContent = siteContent["main-content"]["features-content"];
+topContent[0].textContent = siteContent["main-content"]["features-h4"];
+topContentP[0].textContent = siteContent["main-content"]["features-content"];
 
 //About
-features[1].textContent = siteContent["main-content"]["about-h4"];
-featuresP[1].textContent = siteContent["main-content"]["about-content"];
+topContent[1].textContent = siteContent["main-content"]["about-h4"];
+topContentP[1].textContent = siteContent["main-content"]["about-content"];
+
+//Middle img
+let middleImg = document.querySelector(".middle-img");
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+//Bottom content
+let bottomContent = document.querySelectorAll(".bottom-content h4");
+let bottomContentP = document.querySelectorAll(".bottom-content p");
+
+//Service
+bottomContent[0].textContent = siteContent["main-content"]["services-h4"];
+bottomContentP[0].textContent = siteContent["main-content"]["services-content"];
+
+//Product
+bottomContent[1].textContent = siteContent["main-content"]["product-h4"];
+bottomContentP[1].textContent = siteContent["main-content"]["product-content"];
+
+//Vision
+bottomContent[2].textContent = siteContent["main-content"]["vision-h4"];
+bottomContentP[2].textContent = siteContent["main-content"]["vision-content"];
