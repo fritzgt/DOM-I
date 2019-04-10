@@ -62,3 +62,15 @@ heading.textContent = siteContent["cta"]["h1"];
 //button
 let button = document.querySelector("button");
 button.textContent = siteContent["cta"]["button"];
+
+//Top content
+let features = document.querySelectorAll(".top-content h4");
+let featuresP = document.querySelectorAll(".top-content p");
+
+//features
+features[0].textContent = siteContent["main-content"]["features-h4"];
+featuresP[0].textContent = siteContent["main-content"]["features-content"];
+
+//About
+features[1].textContent = siteContent["main-content"]["about-h4"];
+featuresP[1].textContent = siteContent["main-content"]["about-content"];
