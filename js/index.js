@@ -143,7 +143,7 @@ navColor.forEach(element => (element.style.color = "green"));
 
 //Stretch goal
 
-//Click on main logo will turn on the ligh bulb
+//Click on main logo ("logo-img") to turn on the light bulb
 
 //function to check which is the current src img
 function imgToggle() {
