@@ -6,7 +6,8 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
-    "img-src": "img/logo.png"
+    "img-src": "img/logo.png",
+    "img-src-on": "img/logoOn.png" //My new img with the lit bulb
   },
   cta: {
     h1: "DOM Is Awesome",
@@ -148,12 +149,10 @@ navColor.forEach(element => (element.style.color = "green"));
 //function to check which is the current src img
 function imgToggle() {
   if (logo.src.indexOf("logo.png") != -1) {
-    logo.setAttribute("src", "img/logoOn.png");
+    logo.setAttribute("src", siteContent["nav"]["img-src-on"]);
   } else {
     logo.setAttribute("src", siteContent["nav"]["img-src"]);
   }
 }
 //create event listener to run the function on a click event
-logo.addEventListener("click", event => {
-  imgToggle();
-});
+logo.addEventListener("click", event => imgToggle());
