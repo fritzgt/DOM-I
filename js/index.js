@@ -114,9 +114,11 @@ footer.textContent = siteContent["footer"]["copyright"];
 Task 3 adding new content
 */
 
-//Changing the color of the nav text
+//Changing the color of the nav text,
+//I moved code to line 136 to applies the style to the new nav elements
 
-navAnchor.forEach(element => (element.style.color = "green"));
+// let navColor = document.querySelectorAll("nav a");
+// navColor.forEach(element => (element.style.color = "green"));
 
 //Adding new element to the nav
 const nav = document.querySelector("nav");
@@ -125,8 +127,14 @@ const nav = document.querySelector("nav");
 const home = document.createElement("a");
 home.textContent = "Home";
 nav.prepend(home);
+home.setAttribute("href", "#");
 
 //appendChild
 const cart = document.createElement("a");
 cart.textContent = "Cart";
 nav.appendChild(cart);
+cart.setAttribute("href", "#");
+
+//Changing the color of the nav text
+let navColor = document.querySelectorAll("nav a");
+navColor.forEach(element => (element.style.color = "green"));
