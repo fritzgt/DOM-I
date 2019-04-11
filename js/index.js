@@ -148,14 +148,14 @@ navColor.forEach(element => (element.style.color = "green"));
 //Stretch goal
 
 //Click on main logo ("logo-img") to turn on the light bulb
+//create event listener to run the function on a click event
 
-//function to check which is the current src img
-function imgToggle() {
-  if (logo.src.indexOf("logo.png") != -1) {
+logo.addEventListener("click", event => {
+  let currentImg = logo.getAttribute("src"); //check which img is currently displaying by getting current attribute
+  let defaultImg = siteContent["nav"]["img-src"];
+  if (currentImg === defaultImg) {
     logo.setAttribute("src", siteContent["nav"]["img-src-on"]);
   } else {
     logo.setAttribute("src", siteContent["nav"]["img-src"]);
   }
-}
-//create event listener to run the function on a click event
-logo.addEventListener("click", event => imgToggle());
+});
