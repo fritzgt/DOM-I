@@ -60,7 +60,10 @@ navAnchor[5].textContent = siteContent["nav"]["nav-item-6"];
 let heading = document.querySelector("h1");
 heading.textContent = siteContent["cta"]["h1"];
 heading.style.width = "40%";
-// heading.style.textAlign = "center";
+
+//Banner img
+let bannerImg = document.querySelector("#cta-img");
+bannerImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
 //button
 let button = document.querySelector("button");
