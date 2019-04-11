@@ -58,6 +58,8 @@ navAnchor[5].textContent = siteContent["nav"]["nav-item-6"];
 //H1
 let heading = document.querySelector("h1");
 heading.textContent = siteContent["cta"]["h1"];
+heading.style.width = "40%";
+// heading.style.textAlign = "center";
 
 //button
 let button = document.querySelector("button");
@@ -138,3 +140,20 @@ cart.setAttribute("href", "#");
 //Changing the color of the nav text
 let navColor = document.querySelectorAll("nav a");
 navColor.forEach(element => (element.style.color = "green"));
+
+//Stretch goal
+
+//Click on main logo will turn on the ligh bulb
+
+//function to check which is the current src img
+function imgToggle() {
+  if (logo.src.indexOf("logo.png") != -1) {
+    logo.setAttribute("src", "img/logoOn.png");
+  } else {
+    logo.setAttribute("src", siteContent["nav"]["img-src"]);
+  }
+}
+//create event listener to run the function on a click event
+logo.addEventListener("click", event => {
+  imgToggle();
+});
